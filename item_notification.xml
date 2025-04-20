@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- תוכן ההתראה -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- תמונת פרופיל של מי שעשה לייק -->
+        <ImageView
+            android:id="@+id/likerProfileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profilepic_user1"
+            android:contentDescription="profile image" />
+
+        <!-- טקסט: שם המשתמש שעשה לייק + טקסט חופף -->
+        <TextView
+            android:id="@+id/likeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CoffeeLover liked your post"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+        <!-- תמונה מוקטנת של הפוסט עם שקיפות -->
+        <ImageView
+            android:id="@+id/postThumbnail"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerCrop"
+            android:alpha="0.8"
+            android:src="@drawable/sample_post"
+            android:contentDescription="post preview" />
+    </LinearLayout>
+
+    <!-- קו חוצץ -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/dark_brown"
+        android:visibilit

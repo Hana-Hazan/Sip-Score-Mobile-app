@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_cream"
+    android:layoutDirection="ltr">
+
+    <!-- כותרת עליונה -->
+    <ImageView
+        android:id="@+id/searchTitle"
+        android:layout_width="180dp"
+        android:src="@drawable/ic_logo"
+        android:layout_gravity="center"
+        android:layout_height="100dp"/>
+</LinearLayout>

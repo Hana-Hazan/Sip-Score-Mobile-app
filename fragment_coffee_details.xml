@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- כותרת -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/coffeeTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coffee time"
+                android:textColor="@color/dark_brown"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_alignParentStart="true"/>
+
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_heart_outline"
+                android:contentDescription="Favorite icon" />
+        </RelativeLayout>
+
+        <!-- שם בית הקפה -->
+        <TextView
+            android:id="@+id/shopNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee Time"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- תמונה -->
+        <ImageView
+            android:id="@+id/coffeeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/coffeetime_espresso"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Coffee image"/>
+
+        <!-- תיאור -->
+        <TextView
+            android:id="@+id/coffeeDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rich, bold espresso served with timeless charm — a perfect harmony of depth and elegance"
+            android:textColor="@color/dark_brown"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layoutDirection="ltr"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- דירוג -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My rate:"
+            android:textColor="@color/dark_brown"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/ratingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:layout_marginVertical="8dp">
+
+            <ImageView
+                android:id="@+id/cup1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cup_0"
+                android:contentDescription="Cup 1" />
+
+            <ImageView
+                android:id="@+id/cup2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cup_0"
+                android:contentDescription="Cup 2" />
+
+            <ImageView
+                android:id="@+id/cup3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cup_0"
+                android:contentDescription="Cup 3" />
+
+            <ImageView
+                android:id="@+id/cup4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cup_0"
+                android:contentDescription="Cup 4" />
+
+            <ImageView
+                android:id="@+id/cup5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cup_0"
+                android:contentDescription="Cup 5" />
+        </LinearLayout>
+
+        <!-- ממוצע דירוג -->
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_scorebackground"
+                android:contentDescription="Score background" />
+
+            <TextView
+                android:id="@+id/averageRatingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="4.8"
+                android:textColor="@color/dark_brown"
+                android:textStyle="bold"
+                android:textSize="48sp"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/ratingsCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="1012 ratings"
+            android:textColor="@color/dark_brown"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</ScrollView>

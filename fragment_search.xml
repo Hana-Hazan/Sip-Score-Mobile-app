@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_cream"
+    android:padding="16dp">
+
+    <!-- כותרת עליונה -->
+    <ImageView
+        android:id="@+id/searchTitle"
+        android:layout_width="180dp"
+        android:src="@drawable/ic_logo"
+        android:layout_gravity="center"
+        android:layout_height="100dp"/>
+
+    <!-- שורת חיפוש -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/search_bar_bg"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Enter key words"
+            android:textColorHint="@color/text_secondary"
+            android:background="@android:color/transparent"
+            android:textColor="@color/dark_brown"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:id="@+id/searchIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Search Icon"
+            android:src="@drawable/ic_search_light" />
+    </LinearLayout>
+
+    <!-- רשימת קפה (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coffeeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <!-- מסך הפיד -->
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.sipscore.fragments.FeedFragment"
+        android:label="Feed">
+
+        <!-- ניווט להוספת פוסט -->
+        <action
+            android:id="@+id/action_feedFragment_to_newPostFragment"
+            app:destination="@id/newPostFragment" />
+
+        <!-- ניווט לפרופיל -->
+        <action
+            android:id="@+id/action_feedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_commentsFragment2"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+
+    <!-- מסך יצירת/עריכת פוסט -->
+    <fragment
+        android:id="@+id/newPostFragment"
+        android:name="com.example.sipscore.fragments.NewPostFragment"
+        android:label="New Post" >
+
+        <argument
+            android:name="postId"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="postContent"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="postImageUri"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <action
+            android:id="@+id/action_newPostFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+
+    <!-- מסך הפרופיל -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sipscore.fragments.ProfileFragment"
+        android:label="Profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.sipscore.fragments.CommentsFragment"
+        android:label="Comments" >
+        <argument
+            android:name="postId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_commentsFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_feedFragment_to_commentsFragment"
+        app:destination="@id/commentsFragment" />
+    <fragment
+        android:id="@+id/coffeeDetailsFragment"
+        android:name="com.example.sipscore.fragments.CoffeeDetailsFragment"
+        android:label="CoffeeDetailsFragment" >
+        <action
+            android:id="@+id/action_coffeeDetailsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.sipscore.fragments.NotificationsFragment"
+        android:label="NotificationsFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.sipscore.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_coffeeDetailsFragment"
+            app:destination="@id/coffeeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.sipscore.fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.sipscore.fragments.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.sipscore.LoginActivity"
+        android:label="LoginActivity" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.sipscore.MainActivity"
+        android:label="MainActivity" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.sipscore.RegisterActivity"
+        android:label="RegisterActivity" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.sipscore.SplashActivity"
+        android:label="SplashActivity" />
+
+</navigation>

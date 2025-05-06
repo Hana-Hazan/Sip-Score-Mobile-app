@@ -7,11 +7,14 @@
     android:padding="16dp"
     android:layout_marginBottom="8dp">
 
-    <!-- פרטי משתמש -->
+    <!-- פרטי משתמש ושורת תפריט -->
     <LinearLayout
+        android:id="@+id/postActionsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
 
         <ImageView
             android:id="@+id/userImage"
@@ -19,11 +22,12 @@
             android:layout_height="36dp"
             android:src="@drawable/profilepic_user2"
             android:layout_marginEnd="8dp"
-            android:contentDescription="user" />
+            android:contentDescription="@string/user_image" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -32,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:text="Senia63"
                 android:textStyle="bold"
-                android:textColor="@color/text_primary"/>
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/dateText"
@@ -40,7 +45,45 @@
                 android:layout_height="wrap_content"
                 android:text="April 18, 2024"
                 android:textSize="12sp"
-                android:textColor="@color/text_secondary"/>
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- עוטף חדש עבור האייקונים -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical">
+
+            <ImageView
+                android:id="@+id/editIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_edit"
+                android:contentDescription="Edit Post"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/deleteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Delete Post"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/saveIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_save"
+                android:visibility="gone"
+                android:contentDescription="Save post" />
         </LinearLayout>
     </LinearLayout>
 
@@ -50,29 +93,62 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/sample_post"
-        android:contentDescription="post image" />
+        android:contentDescription="@string/post_image" />
 
     <!-- טקסט -->
-    <TextView
+    <EditText
         android:id="@+id/postText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="All you need for a good day is a good coffee..."
-        android:textColor="@color/text_primary"
-        android:layout_marginTop="8dp" />
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:gravity="start"
+        android:padding="8dp" />
 
     <!-- אייקונים -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end"
-        android:layout_marginTop="8dp">
+        android:gravity="end">
 
-        <ImageView android:src="@drawable/ic_like_outline" android:layout_width="24dp" android:layout_height="24dp" android:contentDescription="like"/>
-        <ImageView android:src="@drawable/ic_comments" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginStart="16dp" android:contentDescription="comment"/>
-        <ImageView android:src="@drawable/ic_share" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginStart="16dp" android:contentDescription="share"/>
+        <TextView
+            android:id="@+id/likesCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:layout_marginEnd="6dp"
+            android:textSize="20sp"
+            android:textColor="@color/text_secondary" />
+
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_like_outline"
+            android:contentDescription="Like" />
+
+        <ImageView
+            android:id="@+id/commentIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_comments"
+            android:contentDescription="Comment" />
+
+        <ImageView
+            android:id="@+id/shareIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_share"
+            android:contentDescription="Share" />
     </LinearLayout>
 </LinearLayout>

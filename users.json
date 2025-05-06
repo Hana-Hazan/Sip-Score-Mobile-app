@@ -1,0 +1,25 @@
+{
+  "anatl120@walla.com": {
+    "firstName": "Anat",
+    "lastName": "Levi",
+    "username": "AnatL",
+    "password": "1234567",
+    "profileImage": "profilepic_user3",
+    "ratings": {
+      "Café Aroma, Latte": 3.5,
+      "Magical Coffee, Espresso": 4.8
+    }
+  },
+  "hanahazan55555@gmail.com": {
+    "firstName": "Hana",
+    "lastName": "Hazan",
+    "username": "HanaH",
+    "password": "12345678",
+    "profileImage": "profilepic_user2",
+    "ratings": {
+      "Café Aroma, Latte": 4.5,
+      "Magical Coffee, Espresso": 4.0,
+      "Coffee Time, Americano": 5.0
+    }
+  }
+}

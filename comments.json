@@ -1,0 +1,23 @@
+[
+  {
+    "postId": "p001",
+    "email": "anatl120@walla.com",
+    "username": "AnatL",
+    "content": "Wow, what a beautiful photo!",
+    "date": "2025-04-25 14:00"
+  },
+  {
+    "postId": "p001",
+    "email": "hanahazan55555@gmail.com",
+    "username": "HanaH",
+    "content": "I want to taste it now. ☕",
+    "date": "2025-04-25 14:05"
+  },
+  {
+    "postId": "p002",
+    "email": "anatl120@walla.com",
+    "username": "AnatL",
+    "content": "Does anyone know where this coffee is sold?",
+    "date": "2025-04-25 15:30"
+  }
+]

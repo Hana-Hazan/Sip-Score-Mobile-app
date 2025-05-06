@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798370736545",
+    "project_id": "sipscoreapp-7fde6",
+    "storage_bucket": "sipscoreapp-7fde6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798370736545:android:2caa8ecab27f98bef743e0",
+        "android_client_info": {
+          "package_name": "com.example.sipscore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqU2fgBYC6bP4Ut3uF1rDW2YcYeyYp7qM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

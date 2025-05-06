@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/background_cream">
 
-    <!-- לוגו בראש המסך -->
     <include
         layout="@layout/header_logo"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- תמונת פרופיל -->
     <ImageView
         android:id="@+id/userProfileImage"
         android:layout_width="36dp"
@@ -29,7 +27,6 @@
         app:layout_constraintTop_toBottomOf="@id/headerLogo"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- שם משתמש -->
     <TextView
         android:id="@+id/usernameText"
         android:layout_width="wrap_content"
@@ -42,19 +39,22 @@
         app:layout_constraintBottom_toBottomOf="@id/userProfileImage"
         app:layout_constraintStart_toEndOf="@id/userProfileImage" />
 
-    <!-- כותרת -->
+
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Post"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:textColor="@color/text_primary"
+        android:textSize="28sp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
         app:layout_constraintTop_toBottomOf="@id/userProfileImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
     <!-- שדה להזנת תוכן הפוסט -->
     <EditText
@@ -107,11 +107,10 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@id/postButton"
         app:layout_constraintTop_toBottomOf="@id/postContentEditText"
-        android:src="@drawable/sample_post"
+        android:src="@drawable/edittext_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constrשaintTop_tocenterOf="@id/uploadImageButton"
         tools:layout_editor_absoluteY="422dp" />
 
     <Button

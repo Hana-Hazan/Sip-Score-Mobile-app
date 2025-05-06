@@ -1,0 +1,42 @@
+[
+  {
+    "serial": 1,
+    "name": "Café Aroma, Latte",
+    "type": "Latte",
+    "shopName": "Café Aroma",
+    "image": "latte_aroma.jpg",
+    "averageRating": 4.6,
+    "ratingCount": 12,
+    "description": "A creamy coffee made with a shot of espresso and steamed milk."
+  },
+  {
+    "serial": 2,
+    "name": "Magical Coffee, Espresso",
+    "type": "Espresso",
+    "shopName": "Magical Coffee",
+    "image": "espresso_magical.jpg",
+    "averageRating": 4.8,
+    "ratingCount": 15,
+    "description": "Strong and bold coffee made by forcing hot water through finely-ground coffee beans."
+  },
+  {
+    "serial": 3,
+    "name": "Coffee Time, Americano",
+    "type": "Americano",
+    "shopName": "Coffee Time",
+    "image": "americano_time.jpg",
+    "averageRating": 4.3,
+    "ratingCount": 7,
+    "description": "Espresso diluted with hot water, offering a milder flavor similar to traditional brewed coffee."
+  },
+  {
+    "serial": 4,
+    "name": "Love of Coffee, Americano",
+    "type": "Americano",
+    "shopName": "Love of Coffee",
+    "image": "americano_love.jpg",
+    "averageRating": 4.5,
+    "ratingCount": 7,
+    "description": "A smooth version of espresso with added water, served black without milk."
+  }
+]
